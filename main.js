@@ -20,5 +20,10 @@ fizzBuzz(15); */
 console.log(maxProfit([40, 2, 30, 1, 4])); // 28
  */
 
-import { chunkArray } from "./chunkArray.js";
+/* import { chunkArray } from "./chunkArray.js";
 console.log(chunkArray([1, 2, 3, 4, 5], 2)); // [[1, 2], [3, 4], [5]]
+ */
+
+/* import twoSum from "./twoSum.js";
+console.log(twoSum([1, 2, 3, 4, 5], 9)); // [0, 4]
+ */
