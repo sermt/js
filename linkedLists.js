@@ -15,6 +15,12 @@ class LinkedList {
     this.length = 0;
   }
 
+  clear() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+
   push(value) {
     const newNode = new Node(value);
     if (this.head === null) {
@@ -134,6 +140,23 @@ class LinkedList {
       this.length++;
     }
   }
+
+  reverseList() {
+    if (!this.head || this.length <= 1) return;
+
+    let current = this.head;
+    this.tail = current;
+    let prev = null;
+
+    while (current) {
+      const next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+
+    this.head = prev;
+  }
 }
 
 const list = new LinkedList();
@@ -157,8 +180,15 @@ list.print(); */
 console.log(list.getLast());
 console.log(list.getLength()); */
 
-console.log(list.getByIndex(1));
+/* console.log(list.getByIndex(1));
 list.setByIndex(1, 10);
 console.log(list.getByIndex(1));
 list.insertAtIndex(1, 20);
+list.print();
+list.clear();
+console.log(list); */
+
+console.log("list before reversing:", list);
+list.print();
+console.log("list after reversing:", list);
 list.print();
